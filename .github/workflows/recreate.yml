@@ -1,0 +1,11 @@
+name: Recreate
+on: [push]
+jobs:
+  invalid-string-length-error:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          git clone https://github.com/vercel/next.js
+          cd next.js
+          git checkout c0374735314452cf7f58ec8881f208d816753106
+          npm why @humanwhocodes/config-array
